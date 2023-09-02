@@ -69,4 +69,4 @@ PD 正在排队
 CG 即将完成
 CD 已完成
 
-![squeue](squeue.png)
+
