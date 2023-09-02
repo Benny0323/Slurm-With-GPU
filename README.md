@@ -61,8 +61,8 @@ down(节点下线)
 mix(节点部分占用，但仍有剩余资源）
 
 ![sinfo](https://hpc.hcmr.gr/wp-content/uploads/2019/04/sinfo.jpg)
-squeue 查看作业信息
 
+squeue 查看作业信息
 
 R 正在运行
 PD 正在排队
