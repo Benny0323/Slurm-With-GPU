@@ -71,4 +71,7 @@ PD 正在排队
 CG 即将完成
 CD 已完成
 
+查看特定用户的作业信息
+squeue grep| XXX
+
 Have any questions and bugs? Please tell me and I will answer and fix them.
