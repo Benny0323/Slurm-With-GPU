@@ -9,7 +9,7 @@ GPU集群是一个计算机集群，其中每个节点配备有图形处理单�
 
 Step 1: anaconda的安装与conda虚拟环境的激活（该部分在之前的仓库中有提及，请参阅）
 
-Step 2: 任务提交
+Step 2: 任务/作业提交
 
 **注意：使用GPU集群运行自己的代码时，与在普通的以Ubuntun系统上搭建的服务器不同，我们知道在普通的服务器上运行代码的时候只需要cd到相应目录，并输入python XXXX.py即可运行，但是使用GPU集群来运行自己的代码时并不是如此。**
 原因是因为GPU集群依赖于Slurm这一作业调度系统，要求用户通过撰写shell脚本的方式提交脚本作业（包括作业命令与资源申请），其次加入运行队列等待排队，最后输出作业结果，其大致流程图如下：
@@ -17,3 +17,32 @@ Step 2: 任务提交
 ![The work flow of GPU Slurm](Flow.png)
 
 按照上述流程，我们首先要撰写一个shell脚本
+
+![Contents in shell](shell.png)
+
+具体内容包括如下：
+
+SBATCH --job-name=test #作业名
+
+SBATCH --nodes=1 #节点数量
+
+SBATCH --ntasks=4 # 启动的任务数量
+
+SBATCH --ntasks-per-node=4  #每个节点启动的任务数量
+
+SBATCH --time= 1:00:00  #最大运行时间 此时设置为1day 也可以设置更长时间
+
+SBATCH --partition=machinename  #设置运行的分区，不同的分区的硬件不同，指定不同区域的服务器
+
+SBATCH --output=%j.out    #输出文件的位置
+
+SBATCH --error=%j.err   #报错信息输出
+
+写完脚本后，我们利用sbatch(批处理模式)将脚本提交，比如：sbatch submission.sh(假设我的shell脚本名字为submission)。
+
+注：slurm 有三种模式提交作业，分别为交互模式，批处理模式，分配模式，这三种方式只是作业提交方式的区别，在管理、调度、机时计算同等对待。一般使用批处理模式sbatch提交作业。
+
+用sbatch提交完作业后，系统会返回一个JOBID，随即进入调度状态。在资源满足要求时，分配计算节点。分配到计算资源后，自动在计算节点执行用户所编辑的脚本内的命令，sbatch 命令提交作业，终端断开连接作业依然在后台运行束，直到脚本执行结束作业自动退出 (或者在作业运行时执行 scancel 命令取消作业后作业自动停止)
+
+计算开始后，工作目录中会生成以slurm-作业号.out文件，为作业的输出
+
