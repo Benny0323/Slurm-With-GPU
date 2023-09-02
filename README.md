@@ -60,7 +60,7 @@ idle(节点可用)
 down(节点下线)
 mix(节点部分占用，但仍有剩余资源）
 
-![sinfo](https://hpc.hcmr.gr/wp-content/uploads/2019/04/sinfo.jpg)
+![sinfo](sinfo.png)
 
 squeue 查看作业信息
 
