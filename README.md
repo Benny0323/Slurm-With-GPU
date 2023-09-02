@@ -62,7 +62,10 @@ mix(节点部分占用，但仍有剩余资源）
 
 squeue 查看作业信息
 
+
 R 正在运行
 PD 正在排队
 CG 即将完成
 CD 已完成
+
+![squeue](squeue.png)
