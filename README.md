@@ -74,4 +74,13 @@ CD 已完成
 查看特定用户的作业信息
 squeue grep| XXX
 
+
 Have any questions and bugs? Please tell me and I will answer and fix them.
+
+参考资料
+
+https://blog.csdn.net/zzixwx/article/details/129397139
+
+https://www.imperial.ac.uk/computing/people/csg/guides/hpcomputing/gpucluster/
+
+https://slurm.schedmd.com/resource_limits.html
