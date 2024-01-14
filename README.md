@@ -50,6 +50,9 @@ SBATCH --error=%j.err   #报错信息输出
 
 计算开始后，工作目录中会生成以作业号.out文件，为作业的输出
 
+一个完整的脚本作业文件：
+![Submission.sh](submission.sh.png)
+
 补充知识：
 
 sinfo 集群状态
