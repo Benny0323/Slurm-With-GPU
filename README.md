@@ -52,6 +52,11 @@ SBATCH --error=%j.err   #报错信息输出
 
 一个完整的脚本作业文件：
 ![Submission.sh](submission.sh.png)
+**注意：**
+
+选择 partition：-p p-RTX2080 
+
+指定具体的机器：-w pgpu04 （必须要先指定-p） 
 
 补充知识：
 
