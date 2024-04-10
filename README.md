@@ -24,11 +24,11 @@ Step 2: 任务/作业提交
 
 SBATCH --job-name=test #作业名
 
-SBATCH --nodes=1 #节点数量
+SBATCH --nodes=1 #节点数量（一个节点就是一台计算机）
 
 SBATCH --ntasks=4 # 启动的任务数量
 
-SBATCH --ntasks-per-node=4  #每个节点启动的任务数量
+SBATCH --ntasks-per-node=4  #每个节点并行的进程数量
 
 SBATCH --time= 1:00:00  #最大运行时间 此时设置为1day 也可以设置更长时间
 
