@@ -18,8 +18,6 @@ Step 2: 任务/作业提交
 
 按照上述流程，我们首先要撰写一个shell脚本（举个例子）
 
-![Contents in shell](shell.png)
-
 具体内容包括如下：
 
 SBATCH --job-name=test #作业名
