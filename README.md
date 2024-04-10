@@ -20,21 +20,19 @@ Step 2: 任务/作业提交
 
 具体内容包括如下：
 
-SBATCH --job-name=test #作业名
-
-SBATCH --nodes=1 #节点数量（一个节点就是一台计算机）
-
-SBATCH --ntasks=4 # 启动的任务数量
-
-SBATCH --ntasks-per-node=4  #每个节点并行的进程数量
-
-SBATCH --time= 1:00:00  #最大运行时间 此时设置为1day 也可以设置更长时间
-
-SBATCH --partition=machinename  #设置运行的分区，不同的分区的硬件不同，指定不同区域的服务器
-
-SBATCH --output=%j.out    #输出文件的位置
-
-SBATCH --error=%j.err   #报错信息输出
+#!/bin/bash                   ###SBATCH参数以#开头，非注释,必须有！
+#SBATCH --job-name=Myjob            ###作业名称
+#SBATCH --nodes=1                ###使用节点数量
+#SBATCH --ntasks=8                ###总的进程数(CPU核数)
+#SBATCH --ntasks-per-node=8           ###每个节点的进程数，1个节点此项无需指定
+###SBATCH --gres=gpu:1              ###每个节点使用的GPU数量，CPU作业此项此项无需指定
+#SBATCH --partition=low              ###使用的分区，目前有3个分区
+#SBATCH --output=%j.out              ###作业正确输出文件,%j代表作业ID
+#SBATCH --error=%j.err               ###作业错误输出文件
+###SBATCH前面1个#号表示生效，2个以上表示注释，请酌情使用。
+###SBATCH --begin=12:00               ###作业开始执行时间，默认立即执行，可选项#
+###SBATCH -t 24:00:00                ###作业强制终止时间，默认24小时，可自定义时长。格式为“小时：分钟：秒”
+###SBATCH --mem=10G                 ###申请预留内存大小，可选项
 
 写完脚本后，我们利用sbatch(批处理模式)将脚本提交，比如：sbatch submission.sh(假设我的shell脚本名字为submission)。
 
