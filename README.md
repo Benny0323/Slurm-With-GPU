@@ -92,3 +92,6 @@ https://blog.csdn.net/zzixwx/article/details/129397139
 https://www.imperial.ac.uk/computing/people/csg/guides/hpcomputing/gpucluster/
 
 https://slurm.schedmd.com/resource_limits.html
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=Benny0323/Slurm-With-GPU&type=Date)](https://star-history.com/#Benny0323/Slurm-With-GPU&Date)
