@@ -1,4 +1,13 @@
 # Slurm With GPU
+
+<div align="center">
+  
+[![](https://img.shields.io/github/stars/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU)
+[![](https://img.shields.io/github/forks/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU)
+[![](https://img.shields.io/github/issues/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU)
+[![](https://img.shields.io/github/license/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU/blob/main/LICENSE) 
+</div>
+
 SLURM （Simple Linux Utility for Resource Management）是一种可扩展的工作负载管理器，已被全世界的国家超级计算机中心广泛采用。 它是免费且开源的，根据GPL通用公共许可证发行。
 
 GPU集群是一个计算机集群，其中每个节点配备有图形处理单元（GPU）。通过图形处理单元（GPGPU）上的通用计算来利用现代GPU的计算能力，可以使用GPU集群执行非常快速的计算。GPU集群可以使用来自两个主要独立硬件供应商的硬件（AMD和NVIDIA）。
