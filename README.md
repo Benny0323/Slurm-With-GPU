@@ -5,7 +5,7 @@
 [![](https://img.shields.io/github/stars/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU)
 [![](https://img.shields.io/github/forks/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU)
 [![](https://img.shields.io/github/issues/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU)
-[![](https://img.shields.io/github/license/Benny0323/Slurm-With-GPU)](https://github.com/Benny0323/Slurm-With-GPU/blob/main/LICENSE)
+[![](https://img.shields.io/github/license/Benny0323/Slurm-With-GPU)](LICENSE)
 </div>
 
 SLURM （Simple Linux Utility for Resource Management）是一种可扩展的工作负载管理器，已被全世界的国家超级计算机中心广泛采用。 它是免费且开源的，根据GPL通用公共许可证发行。
